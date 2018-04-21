@@ -1,0 +1,96 @@
+/* box model */
+* {
+    margin: 0;  /* remove default */
+    padding: 0; /* remove default */
+    box-sizing: border-box; /* width = content + padding + border */
+}
+
+/* . to select class; # to select id */
+
+/* clear float */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* parent */
+body {
+    font-family: Helvetica Neue, Arial;
+    font-size: 18px;
+}
+
+/* child */
+h1, h2 {
+    color: #00960b; /* #RRGGBB */
+    
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.main-text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 1140px; /* for wider screen */
+    margin: 20px auto 0 auto; /* center the content */
+}
+
+.other-posts {
+    width: 25%;
+    float: left; /* put block element side by side */
+}
+
+.other {
+    margin-bottom: 40px;
+}
+
+.author-box {
+    padding-top: 20px;
+    border-top: 1px solid #808080;
+}
+
+.author-text {
+    font-size: 22px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+/* only select img in author-box, no need to make a new class */
+.author-box img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+}
+
+.blog-post img {
+    height: 150px;
+    width: auto; /* remain aspect ratio */
+}
+
+/* set .blog-post (parent) with relative and .date (child) with absolute to  fix .date position */
+.blog-post {
+    width: 75%;
+    float: left; /* put block element side by side */
+    padding-right: 30px;
+    position: relative;
+}
+
+.date {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
